@@ -72,7 +72,11 @@ function BirthdayPage() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
                 className="absolute inset-0 w-full h-full object-cover"
-                alt="Birthday Slideshow"
+                alt={`Birthday Slideshow ${currentImage + 1}`}
+                onError={(e) => {
+                  console.error(`Error loading image: ${images[currentImage]}`);
+                  e.currentTarget.src = '/image4.jpg'; // Provide a fallback image
+                }}
               />
             </AnimatePresence>
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
