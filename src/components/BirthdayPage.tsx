@@ -59,7 +59,7 @@ function BirthdayPage() {
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           className="w-full bg-white bg-opacity-90 rounded-lg shadow-2xl overflow-hidden"
         >
           <div className="relative h-64">
